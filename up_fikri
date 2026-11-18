@@ -1,0 +1,65 @@
+print("=== TOKO SERBA ADA ===")
+
+barang = input("Nama barang: ")
+stok = int(input("Stok awal: "))
+
+ulang = "ya"
+
+while ulang == "ya":
+
+    print("\n=== MENU ===")
+    print("1. Barang Masuk")
+    print("2. Barang Keluar")
+    print("3. Lihat Stok")
+    print("4. Selesai")
+
+    menu = input("Pilih menu: ")
+
+    if menu == "1":
+        masuk = int(input("Jumlah barang masuk: "))
+        stok = stok + masuk
+        print("Stok berhasil ditambahkan.")
+
+    elif menu == "2":
+        keluar = int(input("Jumlah barang keluar: "))
+
+        if keluar <= stok and keluar > 0:
+            stok = stok - keluar
+            print("Barang berhasil dikeluarkan.")
+        else:
+            print("Stok Tidak Mencukupi!")
+
+    elif menu == "3":
+        print("Nama Barang:", barang)
+        print("Sisa Stok:", stok)
+
+    elif menu == "4":
+        print("Program selesai.")
+        break
+
+    else:
+        print("Menu tidak tersedia.")
+
+    ulang = input("\nIngin transaksi lagi? (ya/tidak): ")
+
+print("\n=== HASIL AKHIR ===")
+print("Barang:", barang)
+print("Total stok:", stok)
+print("Terima kasih!")
+
+
+
+
+
+
+PS C:\Users\User\tugas praktek fikri> & 'c:\Users\User\AppData\Local\Microsoft\WindowsApps\python3.13.exe' '"c:/Users/User/tugas praktek fikri/up_nikolubis.py"'
+=== TOKO SERBA ADA ===
+Nama barang: ale ale
+Stok awal: 5
+
+=== MENU ===
+1. Barang Masuk
+2. Barang Keluar
+3. Lihat Stok
+4. Selesai
+Pilih menu:
